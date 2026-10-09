@@ -154,6 +154,25 @@
             src="YOUR_SALESFORCE_EMBEDDED_MESSAGING_URL">
         </script>
     -->
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'sv'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00Dds000005q4np',
+				'Website_Agent_Chat',
+				'https://app-customization-9761--uat.sandbox.my.site.com/ESWWebsiteAgentChat1791527653663',
+				{
+					scrt2URL: 'https://app-customization-9761--uat.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://app-customization-9761--uat.sandbox.my.site.com/ESWWebsiteAgentChat1791527653663/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 </body>
