@@ -174,6 +174,18 @@
 </script>
 <script type='text/javascript' src='https://app-customization-9761--uat.sandbox.my.site.com/ESWWebsiteAgentChat1791527653663/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
+<script>
+  window.addEventListener(
+    "onEmbeddedMessagingButtonCreated",
+    () => {
+      setTimeout(() => {
+        embeddedservice_bootstrap.utilAPI.launchChat()
+          .catch(error => console.error(error));
+      }, 10000);
+    },
+    { once: true }
+  );
+</script>	
 
 </body>
 </html>
